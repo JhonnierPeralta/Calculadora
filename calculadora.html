@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <link rel="stylesheet" href="estilos.css">
     <script src="calculadora.js" defer></script>
 </head>
 <body>
-    <h1>Calculadora</h1>
-    <label for="num1">Número 1:</label>
-    <input type="number" id="num1">
-    <br>
-    <label for="num2">Número 2:</label>
-    <input type="number" id="num2">
-    <br>
-    <button onclick="calculate()">Calcular</button>
-    <br>
-    <div id="result"></div>
+    <div class="container">
+        <h1>Calculadora</h1>
+        <div class="calculator">
+            <label for="num1">Número 1:</label>
+            <input type="number" id="num1">
+            <br>
+            <label for="num2">Número 2:</label>
+            <input type="number" id="num2">
+            <br>
+            <button onclick="calculate()">Calcular</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
 </body>
 </html>

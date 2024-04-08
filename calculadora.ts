@@ -19,10 +19,8 @@ class Calculator {
     }
 }
 
-// Instancia de la calculadora
 const calculator = new Calculator();
 
-// Función para manejar la entrada del usuario y mostrar el resultado
 function calculate(): void {
     const num1: number = parseFloat((<HTMLInputElement>document.getElementById('num1')).value);
     const num2: number = parseFloat((<HTMLInputElement>document.getElementById('num2')).value);
@@ -32,14 +30,14 @@ function calculate(): void {
     if (resultDiv !== null) {
         try {
             const result: string = `
-                Suma: ${calculator.add(num1, num2)} <br>
-                Resta: ${calculator.subtract(num1, num2)} <br>
-                Multiplicación: ${calculator.multiply(num1, num2)} <br>
-                División: ${calculator.divide(num1, num2)}
+                <p>Suma: ${calculator.add(num1, num2)}</p>
+                <p>Resta: ${calculator.subtract(num1, num2)}</p>
+                <p>Multiplicación: ${calculator.multiply(num1, num2)}</p>
+                <p>División: ${calculator.divide(num1, num2)}</p>
             `;
             resultDiv.innerHTML = result;
         } catch (error) {
-            resultDiv.innerHTML = `<span style="color: red;">${error.message}</span>`;
+            resultDiv.innerHTML = `<p class="error">${error.message}</p>`;
         }
     } else {
         console.error('No se encontró el elemento con id "result"');
